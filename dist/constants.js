@@ -111,9 +111,9 @@ const SCROLL_CHAIN = {
 const FUJI_CHAIN = {
     nodeUrl: "https://avalanche-fuji-c-chain.publicnode.com/",
     addrs: {
-        dex: "0xa962d4561a4F02baE7F63fEFA0F72600d047D2b7",
-        query: "0x5C34223E5642FDC204E4924A0DCB09cFf6D2c91d",
-        impact: "0x67e2561480d85bB5a43FE655509eBe48C79D3962"
+        dex: "0x707CA9D999069FAa33ed1147975c2f9f4b36455B",
+        query: "0x8688ff892A5923932Ac0bA3162A9573f9BEC5dDF",
+        impact: "0x9102703652F56774dc96952854d8828277192EC1"
     },
     poolIndex: 36000,
     isTestNet: true,
