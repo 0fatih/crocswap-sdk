@@ -29,6 +29,7 @@ const ETHEREUM_LOGO =
   "https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg";
 const SCROLL_LOGO =
   "https://develop--ambient-finance.netlify.app/scroll_logo.png";
+const FUJI_LOGO = "https://upload.wikimedia.org/wikipedia/en/0/03/Avalanche_logo_without_text.png"
 
 const DFLT_SDK_INFURA_KEY = '360ea5fda45b4a22883de8522ebd639e'
 
@@ -140,6 +141,27 @@ const SCROLL_CHAIN: ChainSpec = {
   logoUrl: SCROLL_LOGO,
 };
 
+const FUJI_CHAIN: ChainSpec = {
+  nodeUrl: "https://avalanche-fuji-c-chain.publicnode.com/",
+  addrs: {
+    dex: "0xa962d4561a4F02baE7F63fEFA0F72600d047D2b7",
+    query: "0x5C34223E5642FDC204E4924A0DCB09cFf6D2c91d",
+    impact: "0x67e2561480d85bB5a43FE655509eBe48C79D3962"
+  },
+  poolIndex: 36000,
+  isTestNet: true,
+  chainId: "0xa869",
+  gridSize: 1,
+  proxyPaths: {
+    cold: 3,
+    long: 130,
+    liq: 128
+  },
+  blockExplorer: "https://testnet.snowtrace.io/",
+  displayName: "Fuji",
+  logoUrl: FUJI_LOGO,
+};
+
 const LOCAL_FORK_CHAIN: ChainSpec = Object.assign({}, GOERLI_CHAIN, {
   nodeUrl: "http://127.0.0.1:8545",
   chainId: "0x7a69",
@@ -153,6 +175,7 @@ export const CHAIN_SPECS: { [chainId: string]: ChainSpec } = {
   "0x66eed": ARB_GOERLI_CHAIN,
   "0x8274f": SCROLL_SEPOLIA_CHAIN,
   "0x82750": SCROLL_CHAIN,
+  "0xa869": FUJI_CHAIN,
   "goerli": GOERLI_CHAIN,
   "arbtest": ARB_GOERLI_CHAIN,
   "arbgoerli": ARB_GOERLI_CHAIN,
@@ -161,6 +184,7 @@ export const CHAIN_SPECS: { [chainId: string]: ChainSpec } = {
   "mainnet": MAINNET_CHAIN,
   "scrolltest": SCROLL_SEPOLIA_CHAIN,
   "scroll": SCROLL_CHAIN,
+  "fuji": FUJI_CHAIN
 };
 
 export const MIN_TICK = -665454;
