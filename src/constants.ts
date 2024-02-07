@@ -154,8 +154,8 @@ const FUJI_CHAIN: ChainSpec = {
   gridSize: 1,
   proxyPaths: {
     cold: 3,
-    long: 130,
-    liq: 128
+    long: 4,
+    liq: 7
   },
   blockExplorer: "https://testnet.snowtrace.io/",
   displayName: "Fuji",
